@@ -17,13 +17,16 @@
     "email": "c.groenenberg@hotmail.com"
   },
   "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.2",
     "bootstrap": "^3.3.7",
     "jquery": "^3.3.1",
     "materialize-css": "^0.100.2",
     "normalize.css": "^7.0.0",
     "object-assign": "^4.1.1",
     "offline-plugin": "^4.8.0",
-    "promise-polyfill": "^6.0.2"
+    "promise-polyfill": "^6.0.2",
+    "vuetify": "^1.0.15"
   },
   "devDependencies": {
     "poi": "^9.0.0",

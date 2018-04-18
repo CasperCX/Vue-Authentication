@@ -9,6 +9,9 @@ router.get('/', (req, res) => {
 router.get('/api/auth',
     AuthController.auth );
 
+router.post('/api/login',
+    AuthController.login );
+    
 router.get('/api/logout',
     AuthController.logout );
 

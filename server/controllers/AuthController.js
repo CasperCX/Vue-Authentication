@@ -7,6 +7,17 @@ module.exports = {
         res.send("auth");
     },
 
+    async login (req, res) {
+        try {
+            const { email, password } = req.body;
+            res.status(200).send({
+                ok: `logged in successfully with: ${email} ${password}`
+            })
+        } catch(err) {
+            res.send("failed login");
+        }
+    },
+
     logout (req, res) {
         req.logout();
         res.redirect('/');

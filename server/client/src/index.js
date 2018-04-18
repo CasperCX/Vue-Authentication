@@ -1,13 +1,13 @@
-import 'jquery/src/jquery';
-// import '../node_modules/bootstrap/dist/css/bootstrap.min.css';
-// import '../node_modules/bootstrap/dist/js/bootstrap.min.js';
-import '../node_modules/materialize-css/dist/css/materialize.css';
-import '../node_modules/materialize-css/dist/js/materialize.js';
+import 'materialize-css/dist/css/materialize.css';
+import 'materialize-css/dist/js/materialize.js';
 import './styles.css';
 
 import Vue from 'vue'
 import App from './components/App.vue'
+import Vuetify from 'vuetify'
 
+
+Vue.use(Vuetify);
 
 Vue.config.productionTip = false
 
