@@ -1,0 +1,17 @@
+{
+  "name": "server",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "server": "nodemon index.js",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"yarn server\" \"yarn client\""
+  },
+  "license": "MIT",
+  "dependencies": {
+    "concurrently": "^3.5.1",
+    "express": "^4.16.3",
+    "mongoose": "^5.0.15",
+    "nodemon": "^1.17.3"
+  }
+}
