@@ -10,6 +10,7 @@ module.exports = {
     async login (req, res) {
         try {
             const { email, password } = req.body;
+            console.log("recieved:", email, password);
             res.status(200).send({
                 ok: `logged in successfully with: ${email} ${password}`
             })
