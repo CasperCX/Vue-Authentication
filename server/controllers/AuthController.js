@@ -7,12 +7,16 @@ module.exports = {
         res.send("auth");
     },
 
-    async login (req, res) {
+    async register (req, res) {
         try {
             const { email, password } = req.body;
-            console.log("recieved:", email, password);
+            const user = new User({
+                email: email,
+                password: password
+            }).save();
+            console.log("saved:", email, password);
             res.status(200).send({
-                ok: `logged in successfully with: ${email} ${password}`
+                ok: `created new user with: ${email} ${password}`
             })
         } catch(err) {
             res.send("failed login");
