@@ -10,14 +10,21 @@ module.exports = {
     async register (req, res) {
         try {
             const { email, password } = req.body;
-            const user = new User({
-                email: email,
-                password: password
-            }).save();
-            console.log("saved:", email, password);
-            res.status(200).send({
-                ok: `created new user with: ${email} ${password}`
-            })
+            const ExistingUser = await User.findOne({
+                email: email
+            });
+                
+            if (ExistingUser) {
+                res.send.status(409).send("user alreay exists");
+            } else {
+                const user = new User({
+                    email: email,
+                    password: password
+                }).save(); 
+                    res.status(200).send({
+                    ok: `created new user with: ${email} ${password}`
+                })
+            }
         } catch(err) {
             res.send("failed login");
         }

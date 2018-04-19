@@ -20,7 +20,7 @@
           <v-btn
             dark
             class="cyan"
-            @click="login">
+            @click="register">
             login
           </v-btn>
         </panel>
@@ -42,9 +42,9 @@ import AuthService from '@/services/AuthService';
       }
     },
     methods: {
-      async login () {
+      async register () {
         try {
-          const res = await AuthService.login({
+          const res = await AuthService.register({
             email: this.email,
             password: this.password
           })
