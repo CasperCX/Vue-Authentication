@@ -1,6 +1,6 @@
 <template>
   <div>
-      My Vue app
+      Login
   </div>
 </template>
 
