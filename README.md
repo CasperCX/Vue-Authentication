@@ -1,1 +1,1 @@
-# Vue-app
+Authentication on a Vue frontend
